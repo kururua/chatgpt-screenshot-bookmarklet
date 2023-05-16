@@ -28,7 +28,7 @@ javascript: (() => {
                         const arrayBuffer = await (await fetch(iconUrl)).arrayBuffer();
                         base64String = btoa(String.fromCharCode(...new Uint8Array(arrayBuffer)));
                     }
-                    for (const el of myIcons) {
+                    for (const el of userIcons) {
                         el.srcset = `data:image/webp;base64,${base64String}`;
                         el.src = `data:image/webp;base64,${base64String}`;
                     }
